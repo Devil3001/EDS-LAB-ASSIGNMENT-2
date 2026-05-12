@@ -1,0 +1,21 @@
+import numpy as np
+
+# Input array from the user
+array1 = np.array(list(map(int, input().split())))
+
+# Searching
+search_value = int(input("Value to search: "))
+count_value = int(input("Value to count: "))
+broadcast_value = int(input("Value to add: "))
+
+# Find indices where value matches in array1
+search = np.where(array1 == search_value)
+print(*[search[0]])
+# Count occurrences in array1
+print(np.count_nonzero(array1 == count_value))
+# Broadcasting addition
+broadcasted_array = array1 + broadcast_value
+print(broadcasted_array)
+# Sort the first array
+sorted_array = np.sort(array1)
+print(sorted_array)
